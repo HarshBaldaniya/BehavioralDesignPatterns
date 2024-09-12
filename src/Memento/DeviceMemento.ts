@@ -32,10 +32,9 @@ class DeviceMemento {
         return this.state;
     }
 }
-
+/// caretaker shall be included Harsh
 export function runMementoPatternExample() {
     const device = new Device();
-    console.log("\n--- Memento Pattern Example ---");
 
     // Test Case 1: Initial state is "Off"
     console.log("\nTest Case 1: Initial State");

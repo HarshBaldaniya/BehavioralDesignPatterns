@@ -42,9 +42,9 @@ class MaintenanceVisitor implements DeviceVisitor {
 export function runVisitorPatternExample() {
     const light = new Light();
     const washingMachine = new WashingMachine();
+    
     const maintenanceVisitor = new MaintenanceVisitor();
     
-    console.log("\nVisitor Pattern Example:");
     console.log("\nTesting Light with MaintenanceVisitor:");
     light.accept(maintenanceVisitor);
     light.receive("Turn On");

@@ -33,11 +33,22 @@ class Light extends AbstractDevice {
     }
 }
 
+class Fan extends AbstractDevice {
+    public receive(command: string): void {
+        if (command === "Fan On") {
+            console.log("Fan: Making it breezy!");
+        }
+    }
+}
+
 export function runMediatorExample() {
     const mediator = new SmartHomeMediator();
     const light = new Light(mediator);
+    const fan = new Fan(mediator);
     mediator.addDevice(light);
+    mediator.addDevice(fan);
     mediator.send("Lights On", light);
+    mediator.send("Fan On", fan);
 }
 
 export { AbstractDevice as Device, Light, SmartHomeMediator };
